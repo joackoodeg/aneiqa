@@ -52,6 +52,6 @@ export async function POST(req: Request) {
     }
 }
 
-export async function GET(req: Request) {
+export async function GET() {
     return NextResponse.json({ success: true, message: "Hello" }, { status: 200 });
 }
