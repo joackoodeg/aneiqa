@@ -1,5 +1,5 @@
+
 import { NextResponse } from "next/server";
-import prisma from "@/lib/prisma";
 import { Prisma } from "@prisma/client";
 
 // Cola en memoria
@@ -16,7 +16,7 @@ async function processQueue() {
     if(!batch || batch.length === 0) return;
 
     try {
-        await prisma.inscription.createMany({ data: batch });
+        
         console.log(`Procesados ${batch.length} registros`);
     } catch (error) {
         console.error("Error al procesar la cola:", error);
