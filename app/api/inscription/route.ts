@@ -13,7 +13,7 @@ async function processQueue() {
 
     const batch = inscriptionQueue.splice(0, BATCH_SIZE); // Extraer hasta 10 elementos
 
-    if(!batch || batch.length === 0) return;
+    if (!batch || batch.length === 0) return;
 
     try {
         
@@ -30,7 +30,7 @@ export async function POST(req: Request) {
     try {
         const { name, email } = await req.json();
 
-        if(!name || !email) {
+        if (!name || !email) {
             return NextResponse.json({ error: "Name and email are required" }, { status: 400 });
         }
 
@@ -50,4 +50,8 @@ export async function POST(req: Request) {
             );
         }
     }
+}
+
+export async function GET() {
+    return NextResponse.json({ success: true, message: "Hello" }, { status: 200 });
 }

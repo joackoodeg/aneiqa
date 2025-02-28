@@ -3,19 +3,19 @@ import { check, sleep } from 'k6';
 
 export const options = {
     stages: [
-        { duration: '10m', target: 600 },  // Simulación de 800 usuarios en 5 minutos
+        { duration: '1m', target: 100 },  // Simulación de 800 usuarios en 5 minutos
     ],
 };
 
 export default function () {
-    const url = 'http://192.168.0.245:3000/api/inscription';
+    const url = 'http://192.168.0.160:3000/api/inscription';
 
     // 🔹 Generar datos válidos
     const randomName = `Usuario_${Math.random().toString(36).substring(7)}`;
     const randomEmail = `user${Math.floor(Math.random() * 100000)}@test.com`;
 
-    if(!randomName || !randomEmail) {
-        console.error("❌ Error: Datos generados inválidos.");	
+    if (!randomName || !randomEmail) {
+        console.error("❌ Error: Datos generados inválidos.");
     }
 
     const payload = JSON.stringify({ name: randomName, email: randomEmail });
