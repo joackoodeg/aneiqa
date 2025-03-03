@@ -5,14 +5,39 @@ import { Users, Building2, Calendar, FileText } from 'lucide-react';
 
 export default async function DashboardPage() {
   // Obtener estadísticas
-  const userCount = 10;
-  const associationCount = 10;
-  const congressCount = 20;
-  const eventCount = 15;
-  
-  const upcomingEvents = 2;
-  
-  const recentAttendances = 3;
+  const userCount = 25;
+  const associationCount = 8;
+  const congressCount = 12;
+  const eventCount = 30;
+
+  const upcomingEvents = [
+    { 
+      name: "Congreso de Tecnología", 
+      congress: { name: "TechCon 2024" }, 
+      eventType: { name: "Conferencia" },
+      date: "2024-03-15T09:00:00"
+    },
+    { 
+      name: "Workshop de IA", 
+      congress: { name: "AI Summit" }, 
+      eventType: { name: "Taller" },
+      date: "2024-03-20T14:00:00"
+    }
+  ];
+
+  const recentAttendances = [
+    {
+      user: { name: "Juan Pérez" },
+      event: { name: "Introducción a React" },
+      timestamp: "2024-01-10T10:30:00"
+    },
+    {
+      user: { name: "María López" },
+      event: { name: "Seguridad en la Web" },
+      timestamp: "2024-01-12T16:45:00"
+    }
+  ];
+
   return (
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

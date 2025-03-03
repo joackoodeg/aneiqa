@@ -22,7 +22,22 @@ import CreateAssociationDialog from '@/components/association/CreateAssociationD
 import DeleteAssociationButton from '@/components/association/DeleteAssociationDialog';
 
 export default async function AssociationsPage() {
-  const associations = []
+  const associations = [
+    {
+      id: 1,
+      name: "Asociación de Desarrolladores",
+      description: "Grupo de profesionales en desarrollo de software",
+      _count: { members: 50, congresses: 3 },
+      createdAt: "2023-06-15T00:00:00"
+    },
+    {
+      id: 2,
+      name: "Diseñadores Digitales",
+      description: "Comunidad de diseñadores UX/UI",
+      _count: { members: 35, congresses: 2 },
+      createdAt: "2023-08-20T00:00:00"
+    }
+  ];
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
