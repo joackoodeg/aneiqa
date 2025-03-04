@@ -20,7 +20,29 @@ import CreateCongressDialog from '@/components/congresses/CreateCongressDialog';
 import DeleteCongressButton from '@/components/congresses/DeleteCongressDialog';
 
 export default async function CongressesPage() {
-  const congresses = [];
+    const congresses = [
+        {
+          id: 1,
+          name: "TechCon 2024",
+          organizer: "Asociación de Desarrolladores",
+          date: "2024-03-15T09:00:00",
+          eventsCount: 12
+        },
+        {
+          id: 2,
+          name: "AI Summit",
+          organizer: "Grupo de Inteligencia Artificial",
+          date: "2024-04-20T10:00:00",
+          eventsCount: 8
+        },
+        {
+          id: 3,
+          name: "Design Week",
+          organizer: "Diseñadores Digitales",
+          date: "2024-05-05T11:00:00",
+          eventsCount: 15
+        }
+      ];
 
   return (
     <div className="space-y-6">

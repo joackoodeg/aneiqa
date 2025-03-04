@@ -14,11 +14,13 @@ type EventType = {
 };
 
 export default function EventTypesPage() {
-  const [eventTypes, setEventTypes] = useState<EventType[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
-  useEffect(() => {
+  /*
+    const [eventTypes, setEventTypes] = useState<EventType[]>([]);
+
+   useEffect(() => {
     const fetchEventTypes = async () => {
       try {
         const response = await fetch("/api/event-types");
@@ -36,7 +38,14 @@ export default function EventTypesPage() {
 
     fetchEventTypes();
   }, []);
-
+ */
+  const eventTypes = [
+    { id: "1", name: "Conferencia" },
+    { id: "2", name: "Taller" },
+    { id: "3", name: "Seminario" },
+    { id: "4", name: "Panel" },
+    { id: "5", name: "Networking" }
+  ];
   return (
     <div className="container mx-auto py-6">
       <div className="flex justify-between items-center mb-4">

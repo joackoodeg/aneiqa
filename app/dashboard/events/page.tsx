@@ -20,7 +20,29 @@ import CreateEventDialog from '@/components/events/CreateEventDialog';
 import DeleteEventButton from '@/components/events/DeleteEventDialog';
 
 export default async function EventsPage() {
-  const events = [];
+    const events = [
+        {
+          id: 1,
+          name: "Introducción a React",
+          type: "Conferencia",
+          date: "2024-03-15T10:00:00",
+          attendeesCount: 45
+        },
+        {
+          id: 2,
+          name: "Workshop de IA Generativa",
+          type: "Taller",
+          date: "2024-03-16T14:00:00",
+          attendeesCount: 30
+        },
+        {
+          id: 3,
+          name: "Seguridad en la Web",
+          type: "Seminario",
+          date: "2024-03-17T09:30:00",
+          attendeesCount: 50
+        }
+      ];
 
   return (
     <div className="space-y-6">
